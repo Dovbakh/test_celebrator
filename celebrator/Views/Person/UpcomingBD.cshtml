@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Person>
+
+@{
+    ViewData["Title"] = "Ближайшие дни рождения";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.ImageSrc)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Name)
+            </th class="text-center">
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Age)
+            </th class="text-center">
+            <th style="text-align:right">
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr style="font-size:24px;">
+            <td width=1%>
+                <img src="@item.ImageSrc" class="rounded-circle center-cropped" width="100" height="100">
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td align="center">
+                <b>@Html.DisplayFor(modelItem => item.Age)</b>
+            </td>
+            <td align="right">  
+                <b>@((item.BirthDate.Day == DateTime.Now.Day && item.BirthDate.Month == DateTime.Now.Month) ? "(сегодня)" : "")</b> 
+                @Convert.ToString(string.Format("{0:dd MMMM}", item.BirthDate))                            
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

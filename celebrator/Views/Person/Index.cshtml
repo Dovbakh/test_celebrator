@@ -1,0 +1,110 @@
+﻿@model PaginatedList<Person>
+
+@{
+    ViewData["Title"] = "Дни рождения";
+
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="btn-toolbar">
+<div class="me-auto">
+    <p>
+        <a asp-action="Create" class="btn btn-secondary">Добавить дату</a>
+    </p>
+</div>
+<form asp-action="Index" method="get">
+    <div class="form-actions">
+        <p>
+            Поиск: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <a asp-action="Index" class="td-icons"><img src="/images/icons/cancel.png" width="20" /></a>
+        </p>
+    </div>
+</form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model[0].ImageSrc)
+            </th>
+            <th class="text-center">
+                <a class="links-black" 
+                asp-action="Index"
+                asp-route-sortOrder="@ViewData["NameSortParm"]" 
+                asp-route-searchString="@ViewData["CurrentFilter"]" 
+                asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                @Html.DisplayNameFor(model => model[0].Name)
+                </a>
+            </th>
+            <th class="text-center">
+                <a class="links-black"
+                asp-action="Index" 
+                asp-route-sortOrder="@ViewData["AgeSortParm"]" 
+                asp-route-searchString="@ViewData["CurrentFilter"]" 
+                asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                @Html.DisplayNameFor(model => model[0].Age)
+                </a>
+            </th>
+            <th style="text-align:right">
+                <a class="links-black"
+                asp-action="Index" 
+                asp-route-sortOrder="@ViewData["BirthDateSortParm"]" 
+                asp-route-searchString="@ViewData["CurrentFilter"]" 
+                asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                @Html.DisplayNameFor(model => model[0].BirthDate)
+                </a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr style="@(item.isPast() ? "opacity: 0.5" : "")">
+
+                <td width=1%>
+                    <img src="@item.ImageSrc" class="rounded-circle center-cropped" width="50" height="50">
+                </td>
+
+
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td align="center">
+                    <b>@Html.DisplayFor(modelItem => item.Age)</b>
+                </td>
+                <td align="right">
+                    @Convert.ToString(string.Format("{0:dd MMMM}", item.BirthDate))
+                </td>
+                <td align="right" width=15% class="td-icons">
+                    <a asp-action="Edit" asp-route-id="@item.Id"><img src="/images/icons/edit.png" width="20" /></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id"><img src="/images/icons/details.png" width="20" /></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id"><img src="/images/icons/delete.png" width="20" /></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-secondary @prevDisabled">
+    Предыдущая
+</a>
+Страница @Model.PageIndex из @Model.TotalPages
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-secondary @nextDisabled">
+    Следующая
+</a>

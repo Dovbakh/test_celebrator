@@ -1,0 +1,65 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+button111-left {
+    float: left;
+    padding-top: 10px;
+}
+
+button111-right {
+    float: right;
+    padding-top: 10px;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+}
+
+.td-icons img {
+    opacity: 0.75;
+}
+
+.td-icons img:hover {
+    opacity: 1;
+}
+
+.inline-left{
+    display:flex;
+    float: left;
+}
+
+.inline-right {
+    display: flex;
+    float: right;
+}
+
+.links-black {
+    color: #000000;
+}
+
+.links-black:hover  {
+    color: #CBCBCB;
+}
+

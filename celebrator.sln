@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "celebrator", "celebrator\celebrator.csproj", "{436EEF2C-850D-4840-892A-4B48B2F8C0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{436EEF2C-850D-4840-892A-4B48B2F8C0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436EEF2C-850D-4840-892A-4B48B2F8C0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436EEF2C-850D-4840-892A-4B48B2F8C0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436EEF2C-850D-4840-892A-4B48B2F8C0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92C5C46B-0B7B-4A9C-AF5F-455E01E896B1}
+	EndGlobalSection
+EndGlobal
