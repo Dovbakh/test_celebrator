@@ -15,28 +15,28 @@
         <dd class="col-sm-10">
             <img src="@Html.DisplayFor(model => model.ImageSrc)" class="rounded-circle center-cropped" width="200" height="200">
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BirthDate)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.BirthDate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ImageSrc)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ImageSrc)
         </dd>
-         <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             <a asp-action="Index" class="btn btn-secondary" role="button">Назад</a>
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-secondary">Редактировать</a>
         </dd>
     </dl>
