@@ -89,6 +89,11 @@ namespace celebrator.Controllers
 
         }
 
+        public async Task<IActionResult> WhitePage()
+        {
+            return View();
+        }
+
 
         // GET: Person/Details/5
         public async Task<IActionResult> Details(int? id)
