@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: celebrator/Dockerfile
+    environment:
+      - ConnectionStrings__MsSqlConnection=Server=mssql_server;Database=PersonsDB;User=sa; Password=1q2w3e4r+;
     ports:
       - "8443:443"
   mssql_server:
