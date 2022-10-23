@@ -43,7 +43,7 @@ namespace celebrator.Controllers
             var persons = from p in _context.Persons
                           select p;
 
-            if(!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
                 persons = persons.Where(p => p.Name.Contains(searchString));
             }
@@ -72,7 +72,7 @@ namespace celebrator.Controllers
 
             int pageSize = 8;
 
-            
+
 
             return persons != null ?
                 View(await PaginatedList<Person>.CreateAsync(persons.AsNoTracking(), pageNumber ?? 1, pageSize)) :
@@ -130,25 +130,25 @@ namespace celebrator.Controllers
             {
                 string path = "/images/icons/no-image.png";
 
-                if (ImageFile != null) // если файл загрузили
+                if (ImageFile != null)
                 {
                     using var inStream = ImageFile.OpenReadStream();
                     var imageInfo = Image.Identify(inStream, out var format);
-                    inStream.Position = 0; // "отматываем" стрим в начало
+                    inStream.Position = 0;
 
-                    if (imageInfo != null) // если этот файл - картинка
+                    if (imageInfo != null)
                     {
                         using var outStream = new MemoryStream();
-                        using (var image = Image.Load(inStream, out format)) // загружаем картинку
+                        using (var image = Image.Load(inStream, out format))
                         {
-                            image.Mutate(x => x.Resize(300, 0)); // меняем размер картинки
+                            image.Mutate(x => x.Resize(300, 0));
                             image.SaveAsPng(outStream);
                             outStream.Position = 0;
                         }
 
                         path = "/images/photo/" + Guid.NewGuid().ToString() + "_" + ImageFile.FileName;
 
-                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create)) // копируем картинку в папку на сервере
+                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
                         {
                             await outStream.CopyToAsync(fileStream);
                         }
@@ -212,30 +212,30 @@ namespace celebrator.Controllers
 
                 string path = _context.Persons.Where(x => x.Id == person.Id).Select(x => x.ImageSrc).FirstOrDefault(); ;
 
-                if (ImageFile != null) // если файл загрузили
+                if (ImageFile != null)
                 {
                     using var inStream = ImageFile.OpenReadStream();
                     var imageInfo = Image.Identify(inStream, out var format);
-                    inStream.Position = 0; // "отматываем" стрим в начало
+                    inStream.Position = 0;
 
-                    if (imageInfo != null) // если этот файл - картинка
+                    if (imageInfo != null)
                     {
                         using var outStream = new MemoryStream();
-                        using (var image = Image.Load(inStream, out format)) // загружаем картинку
+                        using (var image = Image.Load(inStream, out format))
                         {
-                            image.Mutate(x => x.Resize(300, 0)); // меняем размер картинки
+                            image.Mutate(x => x.Resize(300, 0));
                             image.SaveAsPng(outStream);
                             outStream.Position = 0;
                         }
 
-                        if (System.IO.File.Exists(_appEnvironment.WebRootPath + path)) // удалить предыдущую картинку
+                        if (System.IO.File.Exists(_appEnvironment.WebRootPath + path))
                         {
                             System.IO.File.Delete(_appEnvironment.WebRootPath + path);
                         }
 
-                        path = "/images/photo/" + Guid.NewGuid().ToString() + "_" + ImageFile.FileName; // переназначаем путь для новой картинки
+                        path = "/images/photo/" + Guid.NewGuid().ToString() + "_" + ImageFile.FileName;
 
-                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create)) // копируем картинку в папку на сервере
+                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
                         {
                             await outStream.CopyToAsync(fileStream);
                         }
