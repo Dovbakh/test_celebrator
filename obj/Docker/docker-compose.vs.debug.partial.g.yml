@@ -3,7 +3,7 @@ version: '3.4'
 services:
   celebrator:
     image: celebrator:dev
-    container_name: celebrator
+    container_name: celebrator_1
     build:
       target: base
       labels:

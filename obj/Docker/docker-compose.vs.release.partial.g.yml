@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   celebrator:
-    container_name: celebrator
+    container_name: celebrator_1
     build:
       labels:
         com.microsoft.created-by: "visual-studio"
