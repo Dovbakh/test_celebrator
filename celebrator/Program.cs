@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-string connection = builder.Configuration.GetConnectionString("MsSqlConnection");
+string connection = builder.Configuration.GetConnectionString("MsSqlConnection_Container");
 
 builder.Services.AddDbContext<AppDbContext>(options => 
         options.UseSqlServer(connection));
