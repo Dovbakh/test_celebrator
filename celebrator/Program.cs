@@ -6,9 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+string connection = builder.Configuration.GetConnectionString("MsSqlConnection");
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<AppDbContext>(options => 
+        options.UseSqlServer(connection));
 
 builder.Services.AddControllersWithViews();
 
@@ -31,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Person}/{action=UpcomingBD}/{id?}");
+    pattern: "{controller=Person}/{action=WhitePage}/{id?}");
 
 app.Run();

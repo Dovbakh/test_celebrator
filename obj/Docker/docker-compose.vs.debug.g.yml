@@ -5,7 +5,7 @@ services:
     image: celebrator:dev
     container_name: celebrator_1
     build:
-      target: base
+      target: build
       labels:
         com.microsoft.created-by: "visual-studio"
         com.microsoft.visual-studio.project-name: "celebrator"

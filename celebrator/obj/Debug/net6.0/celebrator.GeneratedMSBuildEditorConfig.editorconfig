@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXFVwY29taW5nQkQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/prj/celebrator/celebrator/Views/Person/WhitePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXFdoaXRlUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/prj/celebrator/celebrator/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
