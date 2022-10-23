@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = celebrator
 build_property.RootNamespace = celebrator
-build_property.ProjectDir = F:\prj\celebrator\celebrator\
+build_property.ProjectDir = C:\Users\work\source\repos\celebrator\celebrator\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\prj\celebrator\celebrator
+build_property.MSBuildProjectDirectory = C:\Users\work\source\repos\celebrator\celebrator
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/prj/celebrator/celebrator/Views/Person/Create.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Person/Delete.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Person/Details.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Person/Edit.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Person/Index.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Person/UpcomingBD.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Person/UpcomingBD.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXFVwY29taW5nQkQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Shared/Error.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/_ViewImports.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/_ViewStart.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/prj/celebrator/celebrator/Views/Shared/_Layout.cshtml]
+[C:/Users/work/source/repos/celebrator/celebrator/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8tb25h4gsr
