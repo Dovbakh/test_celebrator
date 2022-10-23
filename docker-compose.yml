@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  celebrator:
+    image: ${DOCKER_REGISTRY-}celebrator
+    build:
+      context: .
+      dockerfile: celebrator/Dockerfile
