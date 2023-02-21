@@ -32,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Person}/{action=WhitePage}/{id?}");
+    pattern: "{controller=Person}/{action=UpcomingBD}");
 
 app.Run();

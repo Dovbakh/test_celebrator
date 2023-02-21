@@ -16,8 +16,10 @@ namespace celebrator.Controllers
 
         public PersonController(AppDbContext context, IWebHostEnvironment appEnvironment)
         {
-            _context = context;
+            _context = context;         
             _appEnvironment = appEnvironment;
+
+            _context.Database.EnsureCreated();
         }
 
         // GET: Person
@@ -320,6 +322,23 @@ namespace celebrator.Controllers
             }
 
             await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> AddTestData()
+        {
+            _context.Add(new Person { BirthDate = DateTime.Parse("1994-02-27 00:00:00.000"), Name = "Сергей", ImageSrc = "/images/photo/4c3db633-a32a-4dfe-812a-a1919f95bb14_2.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1997-03-01 00:00:00.000"), Name = "Антон", ImageSrc = "/images/photo/4f14d699-4f5a-442e-901f-c72924955b93_4.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1991-07-29 00:00:00.000"), Name = "Александр", ImageSrc = "/images/photo/4c3db633-a32a-4dfe-812a-a1919f95bb14_2.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1990-06-29 00:00:00.000"), Name = "Виктор", ImageSrc = "/images/photo/4c3db633-a32a-4dfe-812a-a1919f95bb14_2.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1994-01-29 00:00:00.000"), Name = "Дарья", ImageSrc = "/images/photo/6e92d9c1-1fc8-4548-a421-0e70adcf8be6_5.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1995-02-26 00:00:00.000"), Name = "Анатолий", ImageSrc = "/images/photo/6f7d2e7b-69b9-4354-8138-b3b856d7f867_6.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1995-02-20 00:00:00.000"), Name = "Давид", ImageSrc = "/images/photo/9ae9bdb7-a164-471c-8286-69c497237b0e_1.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("2004-03-29 00:00:00.000"), Name = "Николай", ImageSrc = "/images/photo/9e5ff4e0-d933-49d7-a9cd-41ccb0a7fad4_0.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1994-04-29 00:00:00.000"), Name = "Руслан", ImageSrc = "/images/photo/a19b93f1-2e07-4e1b-83ce-7a383aa828f5_3.PNG" });
+            _context.Add(new Person { BirthDate = DateTime.Parse("1994-05-29 00:00:00.000"), Name = "Кирилл", ImageSrc = "/images/photo/4c3db633-a32a-4dfe-812a-a1919f95bb14_2.PNG" });
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
